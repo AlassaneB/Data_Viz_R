@@ -38,7 +38,7 @@ library(r2d3)
 library(plotly)
 library(shinyjqui)
 
-options(shiny.maxRequestSize = 1000*1024^2) #By default, Shiny limits file uploads to 5MB per file. This increases the file input limit from 5MB to 1000MB(1GB)
+options(shiny.maxRequestSize = -1) #no file size limit
 shinyApp(
   ui <- div(style = "font-family:'calibri light'", 
             dashboardPage(
